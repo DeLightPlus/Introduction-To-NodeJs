@@ -8,9 +8,21 @@ const server = http.createServer((req, res) =>
     {
         const method = req.method;     
 
-        if(req.url === '/')
+        if(req.url === '/' )
         {
-            handleRootRoute(req, res, method);
+            if (method === 'GET') 
+                {
+                      res.writeHead(200, {'Content-Type': 'text/plain'});
+                      res.end('Welcome to my node.js server/');
+                }
+                else 
+                {
+                      res.writeHead(405, {'Content-Type': 'text/plain'});
+                  
+                      res.end('Method Not Allowed');
+                }
+
+            // handleRootRoute(req, res, method);
         }
         else if(req.url === '/about')
         {
@@ -25,7 +37,7 @@ const server = http.createServer((req, res) =>
            handleNotFoundRoute(req, res, method)
         }
 
-        console.log(method);
+        // console.log(method);
         
     });
 

@@ -55,20 +55,20 @@ function displayNextQuestion()
 {
     console.log('----------------------------------------------');
     
-  clearInterval(questionTimer);
-  currentQuestionIndex++;
-  if (currentQuestionIndex >= quizQuestions.length) 
-  {
-    endQuiz();
-  } 
-  else { displayQuestion(); }
+    clearInterval(questionTimer);
+    currentQuestionIndex++;
+    if (currentQuestionIndex >= quizQuestions.length) 
+    {
+        endQuiz();
+    } 
+    else { displayQuestion(); }
 }
 
 function endQuiz() 
 {
-  clearInterval(quizTimer);
-  console.log(`\nQuiz over! Your final score is: ${score}/${quizQuestions.length}`);
-  process.exit();
+    clearInterval(quizTimer);
+    console.log(`\nQuiz over! Your final score is: ${score}/${quizQuestions.length}`);
+    process.exit();
 }
 
 function handleUserInput(answer) 
