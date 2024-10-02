@@ -6,22 +6,22 @@ const rl = readline.createInterface({
 
 const quizQuestions = [
   {
-    question: 'What is the capital of France?',
-    options: ['Paris', 'London', 'Berlin', 'Rome'],
-    answer: 'Paris',
+    question: 'Which of the following command will show version of Node?',
+    options: ['npm --version', 'node --version', 'npm getVersion', 'node getVersion'],
+    answer: 'node --version',
     timeLimit: 15 // in seconds
   },
   {
-    question: 'What is the largest planet in our solar system?',
-    options: ['Earth', 'Saturn', 'Jupiter', 'Uranus'],
-    answer: 'Jupiter',
-    timeLimit: 10 // in seconds
+    question: 'All APIs of Node.JS are.?',
+    options: ['Asynchronous', 'Synchronous', 'Both of the above', 'None of the above'],
+    answer: 'Asynchronous',
+    timeLimit: 15 // in seconds
   },
   {
-    question: 'Who painted the Mona Lisa?',
-    options: ['Leonardo da Vinci', 'Michelangelo', 'Raphael', 'Caravaggio'],
-    answer: 'Leonardo da Vinci',
-    timeLimit: 20 // in seconds
+    question: 'Which of the following is not a valid HTTP method?',
+    options: ['GET', 'PUT', 'POST', 'HEADER'],
+    answer: 'HEADER',
+    timeLimit: 15 // in seconds
   }
 ];
 
@@ -34,7 +34,7 @@ let questionTimer;
 function displayQuestion() 
 {
   const currentQuestion = quizQuestions[currentQuestionIndex];
-  console.log(`\n${currentQuestion.question}`);
+  console.log(`\nQ${currentQuestionIndex+1}. ${currentQuestion.question}`);
   console.log(currentQuestion.options.join('\n'));
   console.log(`You have ${currentQuestion.timeLimit} seconds to answer the question`);
 
@@ -53,8 +53,7 @@ function displayQuestion()
 
 function displayNextQuestion() 
 {
-    console.log('----------------------------------------------');
-    
+    console.log('----------------------------------------------');    
     clearInterval(questionTimer);
     currentQuestionIndex++;
     if (currentQuestionIndex >= quizQuestions.length) 
