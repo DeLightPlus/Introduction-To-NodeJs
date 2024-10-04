@@ -72,8 +72,7 @@ const server = http.createServer((req, res) => {
                 break;
 
             case 'PUT':                
-                //const id = parseInt(new URLSearchParams(queryString).get('id')); // Parse query string manually
-                const id = parseInt(query.id);
+                const id = parseInt(new URLSearchParams(queryString).get('id')); // Parse query string manually
                 let updateBody = '';
                 console.log('parseInd.id: ', id);
                 
