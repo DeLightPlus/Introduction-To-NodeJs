@@ -1,18 +1,22 @@
 [
   {
-    "name": "Milk",
+    "name": "testitem",
+    "quantity": 0
+  },
+  {
+    "name": "TEABAGS",
     "quantity": 2
   },
   {
-    "name": "Coffee new",
-    "quantity": 15
-  },
-  {
-    "name": "Sugar",
+    "name": "COFFEE",
     "quantity": 1
   },
   {
-    "name": "Tea",
-    "quantity": 15
+    "name": "MILK",
+    "quantity": 2
+  },
+  {
+    "name": "SUGAR",
+    "quantity": 1
   }
 ]

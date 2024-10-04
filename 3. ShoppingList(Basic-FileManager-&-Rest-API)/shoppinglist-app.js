@@ -72,9 +72,9 @@ const server = http.createServer((req, res) => {
                 break;
 
             case 'PUT':                
-                const id = parseInt(new URLSearchParams(queryString).get('id')); // Parse query string manually
+                const id = parseInt(new URLSearchParams(queryString).get('index')); // Parse query string manually
                 let updateBody = '';
-                console.log('parseInd.id: ', id);
+                console.log('PUT | parseInd.iNdEX: ', id);
                 
                 req.on('data', chunk => { updateBody += chunk.toString(); });
                 req.on('end', () => {
@@ -94,14 +94,16 @@ const server = http.createServer((req, res) => {
                 break;
 
             case 'DELETE':
-                const deleteId = parseInt(new URLSearchParams(queryString).get('id'));
+                const deleteIndex = parseInt(new URLSearchParams(queryString).get('index'));
+                console.log('DELETE | parseInd.iNdEX: ', deleteIndex);
                 const currentListForDelete = readShoppingList();
-                if (deleteId >= currentListForDelete.length || deleteId < 0) {
+                if (deleteIndex >= currentListForDelete.length || deleteIndex < 0) 
+                {
                     res.writeHead(404);
                     res.end(JSON.stringify({ error: 'Item not found' }));
                     return;
                 }
-                const removedItem = currentListForDelete.splice(deleteId, 1);
+                const removedItem = currentListForDelete.splice(deleteIndex, 1);
                 writeShoppingList(currentListForDelete);
                 res.writeHead(200);
                 res.end(JSON.stringify(removedItem));
