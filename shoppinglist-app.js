@@ -46,9 +46,7 @@ const server = http.createServer((req, res) => {
     if (pathname === '/shopping-list') 
     {
         switch (method) 
-        {
-           
-            
+        {            
             case 'GET':
                 console.log(method);
                 const list = readShoppingList();
