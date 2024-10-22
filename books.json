@@ -16,19 +16,19 @@
     "isbn": "1234567890128"
   },
   {
-    "id": 3,
-    "title": "New Book 3",
-    "author": "New Author 3",
-    "publisher": "New Publisher 3",
-    "publishedDate": "2024-01-03",
-    "isbn": "1234567890520"
+    "id": 4,
+    "title": "New Book 4",
+    "author": "New Author B4",
+    "publisher": "New Publisher B4",
+    "publishedDate": "2023-01-01",
+    "isbn": "1234567690123"
   },
   {
-    "id": 4,
-    "title": "New Book 3",
-    "author": "New Author 3",
-    "publisher": "New Publisher 3",
-    "publishedDate": "2024-01-03",
-    "isbn": "1234567190520"
+    "id": 5,
+    "title": "New Book 50",
+    "author": "New Author 50",
+    "publisher": "New Publisher 50",
+    "publishedDate": "2024-12-12",
+    "isbn": "1234567896563"
   }
 ]

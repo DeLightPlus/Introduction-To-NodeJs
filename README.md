@@ -16,7 +16,16 @@ Create a simple API  for a book Directory
 * ##### Basic Error Handling:
     - Make sure you have validation.
 * ##### Objective:
-    - The objective of this project is to test trainees' understanding of Express, HTTP methods and endpoint creation, and how to handle data sent to  endpoints.
+    - The objective of this project is to test trainees' understanding of 
+        Express, HTTP methods and endpoint creation, and how to handle data sent to  endpoints.
 
 ##### Express - Node.js web application framework
    * expressjs.com 
+
+
+
+   ```bash
+        curl -X PUT 
+        -H "Content-Type: application/json" 
+        -d '{"title": "Updated Book Title", "author": "Updated Author"}' 
+        http://localhost:8000/books/1
