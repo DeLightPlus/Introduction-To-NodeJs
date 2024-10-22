@@ -2,33 +2,14 @@ const express = require("express");
 const app = express();
 const port = 8000;
 
-const fs = require('fs');
-const { title } = require("process");
-const filePath = './books.json';
-
-app.use(express.json());
-
-// Check if file exists, if not create it
-if (!fs.existsSync(filePath)) 
-{
-    fs.writeFileSync(filePath, '[]');
-}
-
-// Read books from file
-let books = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+// app.use(express.json());
 
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res)=>
     {        
         // res.json(books);             
-        res.render("index", {title:'Home'});         
-    });
-
-app.get('/about', (req, res)=>
-    {        
-            // res.json(books);             
-        res.render("about");         
+        res.render("index", { title:'Home' });         
     });
 
 app.get('/404', (req, res)=>
