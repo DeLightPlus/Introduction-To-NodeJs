@@ -1,5 +1,12 @@
 const cards = JSON.parse(document.querySelector('script[data-cards]').getAttribute('data-cards'));
-const win = ['🎊', '', '', '🎊', 'Y', 'O', 'U', '🎈', '-', 'W', 'I', 'N', '🎉', '', '', ''];    
+const win = [
+    '🎊', '', '', '', '', '🎊', 
+    '', '', '', '', '', '', 
+    '', '','Y', 'O', 'U', '🎈', 
+    '', 'W', 'I', 'N', '🎉', '',
+    '', '', '', '', '', '', 
+    '', '', '', '', '', ''
+    ];    
 
 var random_cards = cards.sort(() => (Math.random() > 0.5) ? 2 : -1);
 console.log(random_cards);
